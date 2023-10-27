@@ -11,7 +11,7 @@ class Personnage {
     }
     get informations(){
 
-        return this.pseudo +"(" +  this.classe + ") a" + this.sante + 
+        return this.pseudo +"(" +  this.classe + ") a " + this.sante + 
         " points de vie et est au niveau " + this.niveau + " ."
     }
 
@@ -48,7 +48,7 @@ attaquer(personnage){
 coupSpecial(personnage){
     personnage.sante -= this.attaque * 5;
     console.log(this.pseudo + " attaque avec son coup spécial puissance des arcanes " 
-    + personnage.pseudo +"(" + this.attaque * 5 + " + dégâts)");
+    + personnage.pseudo +"(" + this.attaque * 5 + " dégâts)");
     
     personnage.verifiersante();
 }
@@ -66,7 +66,7 @@ class Guerrier extends Personnage {
 }
 attaquer(personnage){
     personnage.sante -= this.attaque;
-    console.log(this.pseudo + " attaque " + Personnage.pseudo + " avec son épée ( " + this.attaque + " dégâts).");
+    console.log(this.pseudo + " attaque " + personnage.pseudo + " avec son épée ( " + this.attaque + " dégâts).");
     this.evoluer();
     personnage.verifiersante()
 
